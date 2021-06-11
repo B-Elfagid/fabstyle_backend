@@ -28,9 +28,11 @@ ActiveRecord::Schema.define(version: 2021_06_10_225727) do
     t.integer "size"
     t.string "description"
     t.string "website"
-    t.integer "category_id"
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
+  add_foreign_key "posts", "categories"
 end

@@ -7,7 +7,8 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.integer :size
       t.string :description
       t.string :website
-      t.integer :category_id
+      t.belongs_to :category, null: false, foreign_key: true
+      
 
       t.timestamps
     end
