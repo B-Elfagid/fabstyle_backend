@@ -2,7 +2,11 @@ class Api::V1::PostsController < ApplicationController
 
     def index
       posts = Post.all
-      render json: posts
+      #render json: posts
+      options = {
+        include: [:category]
+      }
+      render json: PostSerializer.new(posts, options)
     end 
 
     def create
@@ -17,7 +21,7 @@ end
     private
 
     def post_params
-        params.require(:post).permit(:brand, :image_url, :price, :size, :description, :website, category_id)
+        params.require(:post).permit(:brand, :image_url, :price, :size, :description, :website, :category_id)
     end 
 
 end
