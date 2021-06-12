@@ -3,10 +3,7 @@ class Api::V1::PostsController < ApplicationController
     def index
       posts = Post.all
       #render json: posts
-      options = {
-        include: [:category]
-      }
-      render json: PostSerializer.new(posts, options)
+      render json: PostSerializer.new(posts)
     end 
 
     def create

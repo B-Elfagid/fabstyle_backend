@@ -1,7 +1,6 @@
 class PostSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :brand, :image_url, :price, :size, :description, :website, :brand, :image_url, :price, :size, :description, :website, :category_id
-  belongs_to :category
+  attributes :brand, :image_url, :price, :size, :description, :website, :brand, :image_url, :price, :size, :description, :website, :category_id, :category
 end
 
 

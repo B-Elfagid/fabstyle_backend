@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_225727) do
   create_table "posts", force: :cascade do |t|
     t.string "brand"
     t.string "image_url"
-    t.integer "price"
+    t.float "price"
     t.integer "size"
     t.string "description"
     t.string "website"
