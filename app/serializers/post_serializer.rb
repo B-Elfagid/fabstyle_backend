@@ -1,6 +1,6 @@
 class PostSerializer < ActiveModel::Serializer
   #include FastJsonapi::ObjectSerializer
-  attributes :brand, :image_url, :price, :size, :description, :website, :brand, :image_url, :price, :size, :description, :website, :category_id, :category
+  attributes :brand, :image, :price, :size, :description, :website, :category_id, :category, :id
  
   belongs_to :category, except: [:created_at, :updated_at]
 end 

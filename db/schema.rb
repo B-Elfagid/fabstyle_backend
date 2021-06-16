@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_225727) do
 
   create_table "posts", force: :cascade do |t|
     t.string "brand"
-    t.string "image_url"
+    t.string "image"
     t.float "price"
     t.integer "size"
     t.string "description"
@@ -34,5 +34,4 @@ ActiveRecord::Schema.define(version: 2021_06_10_225727) do
     t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
-  add_foreign_key "posts", "categories"
 end
