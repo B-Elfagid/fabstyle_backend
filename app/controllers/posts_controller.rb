@@ -12,7 +12,9 @@ class PostsController < ApplicationController
     end 
 
     def create
-      post = Post.new(post_params)
+      post = Post.new(brand: params[:brand], price: params[:price], size: params[:size], description: params[:description], website: params[:website], category_id: params[:categories])
+      post.image = params[:image]
+
       if post.save
         render json: post, status: :accepted
       else 
