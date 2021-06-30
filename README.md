@@ -1,24 +1,15 @@
-# README
+**FabStyle**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flatiron School Javascript Project - FabStyle is built with a Javascript frontend and a Rails API backend. it is a fashion site where you can find clothing, shoes and accessories recomendations with it's details via posted images which directs to the main sites should you wish to purchase them.
 
-Things you may want to cover:
+Installation & Usage:
 
-* Ruby version
+fork and clone this repository and cd to the directory from the terminal -run bundle install to install all required gems, run rails s in your terminal in order to start the server to get up and running which will take you to your specified local host URL in your web browser and navigate the app.
 
-* System dependencies
+License:
 
-* Configuration
+The gem is available as open source under the terms of the MIT License.
 
-* Database creation
+Code of Conduct:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Everyone interacting in the ResRev project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.

@@ -14,9 +14,9 @@ class PostsController < ApplicationController
     def create
       post = Post.new(brand: params[:brand], price: params[:price], size: params[:size], description: params[:description], website: params[:website], category_id: params[:categories])
       post.image = params[:image]
-
-      if post.save
+     if post.save
         render json: post, status: :accepted
+       
       else 
         render json: {errors: post.errors.full_messages}, status: 422
     end 
