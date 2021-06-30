@@ -7,13 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Category.destroy_all
-Post.destroy_all
+# Category.destroy_all
+# Post.destroy_all
 
 clothing = Category.create(name: "Clothing")
 shoes = Category.create(name: "Shoes")
 acessories = Category.create(name: "Acessories")
 
-Post.create(brand: "newlook", image: "dress.jpg", price: 10.99, size: 12, description: "red dress", website: "www.newlook.com", category: clothing)
-Post.create(brand: "nike", image: "nike.jpg", price: 129.95, size: 5, description: "black nike air max", website: "www.nike.com", category: shoes)
-Post.create(brand: "accessorize", image: "images.jpg", price: 20, size: 16, description: "layered necklace, featuring faux gemstones and various pretty pendants", website: "www.accessorize.com", category: acessories)

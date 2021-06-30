@@ -1,3 +1,5 @@
+require 'carrierwave/orm/activerecord'
+
 class PostsController < ApplicationController
 
     def index
@@ -12,7 +14,7 @@ class PostsController < ApplicationController
     end 
 
     def create
-      post = Post.new(brand: params[:brand], price: params[:price], size: params[:size], description: params[:description], website: params[:website], category_id: params[:categories])
+      post = Post.new(brand: params[:brand], price: params[:price], size: params[:size], description: params[:description], website: params[:website], category_id: params[:category_id])
       post.image = params[:image]
      if post.save
         render json: post, status: :accepted
