@@ -8,10 +8,10 @@ class PostsController < ApplicationController
       #render json: PostSerializer.new(posts)
     end 
 
-    def show
-      post = Post.find(params[:id])
-      render json: post
-    end 
+    # def show
+    #   post = Post.find(params[:id])
+    #   render json: post
+    # end 
 
     def create
       post = Post.new(brand: params[:brand], price: params[:price], size: params[:size], description: params[:description], website: params[:website], category_id: params[:category_id])

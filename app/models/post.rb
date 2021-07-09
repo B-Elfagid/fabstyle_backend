@@ -11,3 +11,5 @@ class Post < ApplicationRecord
      validates :website, presence: true
     
 end
+
+
